@@ -1,0 +1,106 @@
+<mujoco model="stretch scene">
+
+  <include file="stretch.xml"/>
+
+  <statistic center="0 0 .75" extent="1.2" meansize="0.05"/>
+
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <global azimuth="-120" elevation="-20"/>
+  </visual>
+
+  <asset>
+    <material name="floor" rgba=".1 .1 .1 1" reflectance="0.1"/>
+    <texture type="2d" name="wood" file="wood.png"/>
+    <material name="wood" texture="wood"/>
+    <material name="object" rgba=".2 .2 .2 1"/>
+    <texture type="skybox" builtin="gradient" rgb1="0.44 0.80 1.00" rgb2="1 1 1" width="512" height="3072"/>
+  </asset>
+
+  <worldbody>
+    <light pos="0 0 1.5" dir="0 0 -1" directional="true"/>
+    <geom name="floor" size="0 0 0.05" type="plane" material="floor"/>
+    <body name="table" pos="0 -1 .24">
+      <geom type="box" size=".6 .5 .24" mass="1" material="wood"/>
+    </body>
+    <body name="object1" pos="-.02 -0.55 .6">
+      <freejoint/>
+      <geom type="box" size=".02 .04 .04" mass=".5" rgba=".2 .2 .5 1"/>
+    </body>
+    <body name="object2" pos=".08 -0.55 .6">
+      <freejoint/>
+      <geom type="cylinder" size=".02 .04 .04" mass=".5" rgba=".8 .2 .2 1"/>
+    </body>
+    <body name="cup_1" pos="0.3 -0.55 0.6">
+        <freejoint/>
+
+        <!-- Bottom -->
+        <geom type="cylinder" pos="0 0 0" size="0.03 0.01" rgba="0 1 0 1"/>
+
+        <!-- 12 wall segments forming hollow cylinder -->
+        <geom type="box" pos="0.03 0 0.07" euler="0 0 0" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="0.02598 0.015 0.07" euler="0 0 0.5236" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="0.015 0.02598 0.07" euler="0 0 1.0472" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="0 0.03 0.07" euler="0 0 1.5708" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="-0.015 0.02598 0.07" euler="0 0 2.0944" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="-0.02598 0.015 0.07" euler="0 0 2.6180" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="-0.03 0 0.07" euler="0 0 3.1416" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="-0.02598 -0.015 0.07" euler="0 0 -2.6180" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="-0.015 -0.02598 0.07" euler="0 0 -2.0944" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="0 -0.03 0.07" euler="0 0 -1.5708" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="0.015 -0.02598 0.07" euler="0 0 -1.0472" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="0.02598 -0.015 0.07" euler="0 0 -0.5236" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+
+        <inertial pos="0 0 0.07" mass="0.05" diaginertia="0.0003 0.0003 0.0001"/>
+    </body>
+
+    <body name="cup_2" pos=".5 -0.55 .6">
+      <freejoint/>
+
+        <!-- Bottom -->
+        <geom type="cylinder" pos="0 0 0" size="0.03 0.01" rgba="0 1 0 1"/>
+
+        <!-- 12 wall segments forming hollow cylinder -->
+        <geom type="box" pos="0.03 0 0.07" euler="0 0 0" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="0.02598 0.015 0.07" euler="0 0 0.5236" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="0.015 0.02598 0.07" euler="0 0 1.0472" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="0 0.03 0.07" euler="0 0 1.5708" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="-0.015 0.02598 0.07" euler="0 0 2.0944" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="-0.02598 0.015 0.07" euler="0 0 2.6180" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="-0.03 0 0.07" euler="0 0 3.1416" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="-0.02598 -0.015 0.07" euler="0 0 -2.6180" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="-0.015 -0.02598 0.07" euler="0 0 -2.0944" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="0 -0.03 0.07" euler="0 0 -1.5708" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="0.015 -0.02598 0.07" euler="0 0 -1.0472" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+        <geom type="box" pos="0.02598 -0.015 0.07" euler="0 0 -0.5236" size="0.0039 0.012 0.07" rgba="0 0 0.3 0.5"/>
+
+        <inertial pos="0 0 0.07" mass="0.05" diaginertia="0.0003 0.0003 0.0001"/>
+    </body>
+    <include file="particles_free.xml"/>
+  </worldbody>
+  <extension>
+          <plugin plugin="mujoco.multiverse_connector">
+                  <instance name="mujoco_client">
+                          <config key="host" value="tcp://127.0.0.1" />
+                          <config key="server_port" value="7000" />
+                          <config key="client_port" value="7500" />
+                          <config key="world_name" value="world" />
+                          <config key="simulation_name" value="scene_simulation" />
+                          <config key="send" value="{'body': ['position', 'quaternion'], 'joint': ['joint_angular_position', 'joint_linear_position', 'joint_angular_velocity', 'joint_linear_velocity', 'joint_force', 'joint_torque'], 'sensor': ['scalar']}" />
+                          <config key="receive" value="{
+                            'left_wheel_vel': ['cmd_joint_velocity'],
+                            'right_wheel_vel': ['cmd_joint_velocity'],
+                            'lift': ['cmd_joint_linear_position'],
+                            'arm': ['cmd_scalar'],
+                            'wrist_yaw': ['cmd_joint_angular_position'],
+                            'wrist_pitch': ['cmd_joint_angular_position'],
+                            'wrist_roll': ['cmd_joint_angular_position'],
+                            'gripper': ['cmd_joint_linear_position'],
+                            'head_pan': ['cmd_joint_angular_position'],
+                            'head_tilt': ['cmd_joint_angular_position']
+                          }" />
+                  </instance>
+          </plugin>
+  </extension>
+</mujoco>

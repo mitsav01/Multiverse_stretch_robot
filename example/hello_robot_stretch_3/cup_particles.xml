@@ -1,0 +1,52 @@
+<mujoco model="particles">
+  <body name="particle0" pos="0.27847 -0.55714 0.64750">
+    <freejoint/>
+    <inertial pos="0 0 0" mass="1e-4" diaginertia="1e-8 1e-8 1e-8"/>
+    <geom type="sphere" size="0.005" rgba="0.568 0.582 0.668 1"/>
+  </body>
+  <body name="particle1" pos="0.28993 -0.55611 0.61737">
+    <freejoint/>
+    <inertial pos="0 0 0" mass="1e-4" diaginertia="1e-8 1e-8 1e-8"/>
+    <geom type="sphere" size="0.005" rgba="0.944 0.639 0.755 1"/>
+  </body>
+  <body name="particle2" pos="0.30095 -0.54796 0.64176">
+    <freejoint/>
+    <inertial pos="0 0 0" mass="1e-4" diaginertia="1e-8 1e-8 1e-8"/>
+    <geom type="sphere" size="0.005" rgba="0.988 0.711 0.877 1"/>
+  </body>
+  <body name="particle3" pos="0.29689 -0.56738 0.65201">
+    <freejoint/>
+    <inertial pos="0 0 0" mass="1e-4" diaginertia="1e-8 1e-8 1e-8"/>
+    <geom type="sphere" size="0.005" rgba="0.074 0.697 0.081 1"/>
+  </body>
+  <body name="particle4" pos="0.29467 -0.55364 0.65706">
+    <freejoint/>
+    <inertial pos="0 0 0" mass="1e-4" diaginertia="1e-8 1e-8 1e-8"/>
+    <geom type="sphere" size="0.005" rgba="0.820 0.706 0.725 1"/>
+  </body>
+  <body name="particle5" pos="0.29301 -0.54575 0.64098">
+    <freejoint/>
+    <inertial pos="0 0 0" mass="1e-4" diaginertia="1e-8 1e-8 1e-8"/>
+    <geom type="sphere" size="0.005" rgba="0.494 0.889 0.775 1"/>
+  </body>
+  <body name="particle6" pos="0.31484 -0.53925 0.64785">
+    <freejoint/>
+    <inertial pos="0 0 0" mass="1e-4" diaginertia="1e-8 1e-8 1e-8"/>
+    <geom type="sphere" size="0.005" rgba="0.165 0.255 0.709 1"/>
+  </body>
+  <body name="particle7" pos="0.30008 -0.54838 0.63795">
+    <freejoint/>
+    <inertial pos="0 0 0" mass="1e-4" diaginertia="1e-8 1e-8 1e-8"/>
+    <geom type="sphere" size="0.005" rgba="0.532 0.078 0.908 1"/>
+  </body>
+  <body name="particle8" pos="0.29850 -0.53777 0.66206">
+    <freejoint/>
+    <inertial pos="0 0 0" mass="1e-4" diaginertia="1e-8 1e-8 1e-8"/>
+    <geom type="sphere" size="0.005" rgba="0.019 0.330 0.646 1"/>
+  </body>
+  <body name="particle9" pos="0.29589 -0.55977 0.66498">
+    <freejoint/>
+    <inertial pos="0 0 0" mass="1e-4" diaginertia="1e-8 1e-8 1e-8"/>
+    <geom type="sphere" size="0.005" rgba="0.066 0.631 0.525 1"/>
+  </body>
+</mujoco>

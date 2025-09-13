@@ -1,6 +1,3 @@
-[submodule "Multiverse_stretch_robot"]
-	path = Multiverse_stretch_robot
-	url = https://github.com/mitsav01/Multiverse_stretch_robot.git
 [submodule "Multiverse-ClientPy"]
 	path = Multiverse-ClientPy
 	url = https://github.com/Multiverse-Framework/Multiverse-ClientPy.git

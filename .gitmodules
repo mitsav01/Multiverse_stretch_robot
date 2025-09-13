@@ -1,0 +1,15 @@
+[submodule "Multiverse_stretch_robot"]
+	path = Multiverse_stretch_robot
+	url = https://github.com/mitsav01/Multiverse_stretch_robot.git
+[submodule "Multiverse-ClientPy"]
+	path = Multiverse-ClientPy
+	url = https://github.com/Multiverse-Framework/Multiverse-ClientPy.git
+[submodule "Multiverse-MuJoCo-Connector"]
+	path = Multiverse-MuJoCo-Connector
+	url = https://github.com/Multiverse-Framework/Multiverse-Mujoco-Connector.git
+[submodule "Multiverse-ROS-Connector"]
+	path = Multiverse-ROS-Connector
+	url = https://github.com/Multiverse-Framework/Multiverse-ROS-Connector.git
+[submodule "Multiverse-ServerClient"]
+	path = Multiverse-ServerClient
+	url = https://github.com/Multiverse-Framework/Multiverse-ServerClient.git

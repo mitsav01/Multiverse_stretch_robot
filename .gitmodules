@@ -4,9 +4,9 @@
 [submodule "Multiverse-MuJoCo-Connector"]
 	path = Multiverse-MuJoCo-Connector
 	url = https://github.com/Multiverse-Framework/Multiverse-Mujoco-Connector.git
-[submodule "Multiverse-ROS-Connector"]
-	path = Multiverse-ROS-Connector
-	url = https://github.com/Multiverse-Framework/Multiverse-ROS-Connector.git
 [submodule "Multiverse-ServerClient"]
 	path = Multiverse-ServerClient
 	url = https://github.com/Multiverse-Framework/Multiverse-ServerClient.git
+[submodule "Multiverse-ROS-Connector"]
+	path = Multiverse-ROS-Connector
+	url = https://github.com/Multiverse-Framework/Multiverse-ROS-Connector.git

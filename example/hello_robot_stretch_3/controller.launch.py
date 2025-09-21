@@ -68,6 +68,13 @@ def generate_launch_description():
         output='screen'
     )
 
+    omni_drive_controller_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        arguments=['omni_drive_controller'],
+        output='screen'
+    )
+
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
@@ -97,11 +104,13 @@ def generate_launch_description():
     return LaunchDescription([
         robot_state_publisher_node,
         ros2_control_node,
+        rviz_node,
         joint_state_broadcaster_spawner,
         joint_trajectory_controller_spawner,
-        diff_drive_controller_spawner,
-        rviz_node,
-        static_tf_node
+        #omni_drive_controller_spawner,
+
+        #diff_drive_controller_spawner,
+        #static_tf_node
         # joint_trajectory_handler,
         # diff_drive_handler,
     ])

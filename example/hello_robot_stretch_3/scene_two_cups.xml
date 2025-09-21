@@ -89,8 +89,8 @@
                           <config key="simulation_name" value="scene_simulation" />
                           <config key="send" value="{'body': ['position', 'quaternion'], 'joint': ['joint_angular_position', 'joint_linear_position', 'joint_angular_velocity', 'joint_linear_velocity', 'joint_force', 'joint_torque'], 'sensor': ['scalar']}" />
                           <config key="receive" value="{
-                            'left_wheel_vel': ['cmd_joint_velocity'],
-                            'right_wheel_vel': ['cmd_joint_velocity'],
+                            'left_wheel_vel': ['cmd_joint_angular_velocity'],
+                            'right_wheel_vel': ['cmd_joint_angular_velocity'],
                             'lift': ['cmd_joint_linear_position'],
                             'arm': ['cmd_scalar'],
                             'wrist_yaw': ['cmd_joint_angular_position'],

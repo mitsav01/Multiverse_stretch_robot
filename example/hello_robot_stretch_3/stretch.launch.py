@@ -46,6 +46,13 @@ def generate_launch_description():
         output='screen'
     )
 
+    joint_velocity_controller_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        arguments=['joint_velocity_controller'],
+        output='both'
+    )
+
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
@@ -60,6 +67,7 @@ def generate_launch_description():
         arguments=['diff_drive_controller'],
         output='both'
     )
+
 
     return LaunchDescription([
         robot_state_publisher_node,

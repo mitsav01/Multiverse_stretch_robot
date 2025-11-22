@@ -14,7 +14,6 @@ controller_manager:
     joint_velocity_controller:
       type: velocity_controllers/JointGroupVelocityController
 
-
 joint_trajectory_controller:
   ros__parameters:
     command_interfaces:
@@ -24,12 +23,14 @@ joint_trajectory_controller:
       - velocity
     joints:
       - joint_lift
-      - joint_wrist_yaw
       - joint_wrist_pitch
       - joint_wrist_roll
-      - joint_gripper_slide
+      - joint_wrist_yaw
       - joint_head_pan
       - joint_head_tilt
+      - joint_gripper_slide
+      - joint_arm_l0
+
     open_loop_control: true
 
 joint_velocity_controller:
@@ -85,4 +86,3 @@ diff_drive_controller:
         max_velocity: 0.42
         max_acceleration: 0.2
         max_jerk: 0.0
-

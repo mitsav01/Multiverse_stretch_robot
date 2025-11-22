@@ -521,6 +521,9 @@
     <joint joint1="joint_arm_l0" joint2="joint_arm_l1"/>
     <joint joint1="joint_arm_l1" joint2="joint_arm_l2"/>
     <joint joint1="joint_arm_l2" joint2="joint_arm_l3"/>
+    <!-- <joint joint1="joint_arm_l1" joint2="joint_arm_l0"/>
+    <joint joint1="joint_arm_l2" joint2="joint_arm_l0"/>
+    <joint joint1="joint_arm_l3" joint2="joint_arm_l0"/>  -->
     <joint joint1="joint_gripper_finger_left_open" joint2="joint_gripper_slide" polycoef="0 10 0 0 0" solref="0.005 1"/>
     <joint joint1="joint_gripper_finger_right_open" joint2="joint_gripper_slide" polycoef="0 10 0 0 0" solref="0.005 1"/>
   </equality>

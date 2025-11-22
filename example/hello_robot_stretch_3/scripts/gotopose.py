@@ -21,8 +21,8 @@ class GoToPose(Node):
         )
 
         # Target in odom frame (set your goal here)
-        self.target_x = 2.0
-        self.target_y = 0.0
+        self.target_x = 1.9
+        self.target_y = -0.3
         self.goal_tolerance = 0.05
 
         self.current_pose = None

@@ -15,26 +15,29 @@ class GripperController(Node):
         traj = JointTrajectory()
         traj.joint_names = [
             'joint_lift',
-            'joint_wrist_yaw',
             'joint_wrist_pitch',
             'joint_wrist_roll',
-            'joint_gripper_slide',
+            'joint_wrist_yaw',
             'joint_head_pan',
-            'joint_head_tilt'
+            'joint_head_tilt',
+            'joint_gripper_slide',
+            'joint_arm_l0'
         ]
+
 
         point = JointTrajectoryPoint()
         # Example positions: adjust based on your grasp pose
         point.positions = [
-            0.4,   # joint_lift
-            0.0,   # joint_wrist_yaw
-            -0.5,  # joint_wrist_pitch
-            0.0,   # joint_wrist_roll
-            0.02,  # joint_gripper_slide (close gripper)
-            0.0,   # joint_head_pan
-            -0.1   # joint_head_tilt
+            0.5,   
+            0.0,   
+            -0.5,  
+            0.0,   
+            0.02,  
+            0.0,   
+            -0.1,
+            0.13        
         ]
-        point.time_from_start.sec = 2  # move in 2 seconds
+        point.time_from_start.sec = 1  
         point.time_from_start.nanosec = 0
 
         traj.points.append(point)

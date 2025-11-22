@@ -9,4 +9,4 @@
 	url = https://github.com/Multiverse-Framework/Multiverse-ServerClient.git
 [submodule "Multiverse-ROS-Connector"]
 	path = Multiverse-ROS-Connector
-	url = https://github.com/Multiverse-Framework/Multiverse-ROS-Connector.git
+	url = https://github.com/mitsav01/Multiverse-ROS-Connector.git

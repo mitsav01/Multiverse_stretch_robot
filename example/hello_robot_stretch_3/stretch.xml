@@ -18,6 +18,9 @@
           frictionloss="1.5"/>
         <general ctrlrange="0.0 1.1" gainprm="400" biasprm="0 -200 -100" forcerange="-70 70"/>
       </default>
+      <default class="arm">
+        <general ctrlrange="0 0.13" gainprm="3000" biasprm="0 -1500 -100" forcerange="-56 56"/>
+      </default>
       <default class="telescope">
         <joint type="slide" axis="0 0 1" damping="50" stiffness="0.02" armature="0.01" range="0 0.13" frictionloss="1.5"/>
         <general ctrlrange="0 0.52" gainprm="150" biasprm="0 -100 -10" forcerange="-56 56"/>
@@ -508,22 +511,19 @@
     <exclude body1="rubber_tip_right" body2="rubber_tip_left"/>
   </contact>
 
-  <tendon>
+  <!-- <tendon>
     <fixed name="extend">
       <joint joint="joint_arm_l0" coef="1"/>
       <joint joint="joint_arm_l1" coef="1"/>
       <joint joint="joint_arm_l2" coef="1"/>
       <joint joint="joint_arm_l3" coef="1"/>
     </fixed>
-  </tendon>
+  </tendon> -->
 
   <equality>
     <joint joint1="joint_arm_l0" joint2="joint_arm_l1"/>
-    <joint joint1="joint_arm_l1" joint2="joint_arm_l2"/>
-    <joint joint1="joint_arm_l2" joint2="joint_arm_l3"/>
-    <!-- <joint joint1="joint_arm_l1" joint2="joint_arm_l0"/>
-    <joint joint1="joint_arm_l2" joint2="joint_arm_l0"/>
-    <joint joint1="joint_arm_l3" joint2="joint_arm_l0"/>  -->
+    <joint joint1="joint_arm_l0" joint2="joint_arm_l2"/>
+    <joint joint1="joint_arm_l0" joint2="joint_arm_l3"/>
     <joint joint1="joint_gripper_finger_left_open" joint2="joint_gripper_slide" polycoef="0 10 0 0 0" solref="0.005 1"/>
     <joint joint1="joint_gripper_finger_right_open" joint2="joint_gripper_slide" polycoef="0 10 0 0 0" solref="0.005 1"/>
   </equality>
@@ -532,7 +532,8 @@
     <velocity name="left_wheel_vel" joint="joint_left_wheel" class="wheel"/>
     <velocity name="right_wheel_vel" joint="joint_right_wheel" class="wheel"/>
     <position name="lift" joint="joint_lift" class="lift"/>
-    <position name="arm" tendon="extend" class="telescope"/>
+    <position name="arm" joint="joint_arm_l0" class="arm"/>
+    <!-- <position name="arm" tendon="extend" class="telescope"/> -->
     <position name="wrist_yaw" joint="joint_wrist_yaw" class="wrist_yaw"/>
     <position name="wrist_pitch" joint="joint_wrist_pitch" class="wrist_pitch"/>
     <position name="wrist_roll" joint="joint_wrist_roll" class="wrist_roll"/>

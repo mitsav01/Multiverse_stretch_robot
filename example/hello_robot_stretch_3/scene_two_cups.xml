@@ -92,7 +92,7 @@
                             'left_wheel_vel': ['cmd_joint_angular_velocity'],
                             'right_wheel_vel': ['cmd_joint_angular_velocity'],
                             'lift': ['cmd_joint_linear_position'],
-                            'arm': ['cmd_scalar'],
+                            'arm': ['cmd_joint_linear_position'],
                             'wrist_yaw': ['cmd_joint_angular_position'],
                             'wrist_pitch': ['cmd_joint_angular_position'],
                             'wrist_roll': ['cmd_joint_angular_position'],

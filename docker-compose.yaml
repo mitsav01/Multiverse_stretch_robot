@@ -1,0 +1,20 @@
+services:
+  multiverse:
+    build: .
+    container_name: multiverse_env
+    environment:
+      - DISPLAY=${DISPLAY}
+      - MUJOCO_GL=egl
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./workspace:/home/developer/workspace
+    devices:
+      - /dev/dri:/dev/dri
+    shm_size: 8gb
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
